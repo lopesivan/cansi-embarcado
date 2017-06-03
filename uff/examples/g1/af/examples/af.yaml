@@ -1,0 +1,37 @@
+#
+# Fornecer uma interface para criação de famílias de objetos relacionados ou
+# dependentes sem especificar suas classes concretas.
+#
+
+Family:                      # Família de tipos
+- Family                     # Nome do tipo
+- FamilyTypes:               # Nome da Família de tipos
+    - Family
+    - AbstractFactory
+    - AbstractProduct
+    - ConcreteFactory
+    - Product
+    - Client
+    - Build
+    - Makefile
+
+AbstractFactory:            # Classe *AbstractFactory* 
+- AbstractFactory:          # Nome da Classe *AbstractFactory*
+    - get                   # Método chamador
+    - CreateAbstractFactoryToJavaClass:       # Primeiro método abstrato de *AbstractFactory*
+        - AbstractAbstractFactoryToJavaClass: #
+            - doIt
+            - AbstractFactoryToJavaClassFamily          # empty
+            - AbstractFactoryToJavaClassAbstractFactory #
+            - AbstractFactoryToJavaClassAbstractProduct #
+            - AbstractFactoryToJavaClassConcreteFactory #
+            - AbstractFactoryToJavaClassProduct         #
+            - AbstractFactoryToJavaClassClient          #
+            - AbstractFactoryToJavaBuild                # empty
+            - AbstractFactoryToMakefile                 # empty
+
+ConcreteFactory:
+- ConcreteFactory1          # Cria o Produto A1, B1 e C1
+
+Client:
+- Client                    # Nome do arquivo principal

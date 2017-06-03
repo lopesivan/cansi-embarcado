@@ -1,0 +1,36 @@
+            if (old == WHITESPACE)
+            {
+                /* WHITESPACE_TO_ALPHA    */
+                if(current == ALPHA)
+                {
+                    begin = end;
+                }
+                /* WHITESPACE_TO_OPERATOR */
+                if(current == OPERATOR)
+                {
+                    begin = end;
+                }
+            }
+
+            if (old == ALPHA)
+            {
+                /* ALPHA_TO_OPERATOR */
+                if(current == OPERATOR)
+                {
+                    printf("imprime ALPHA\n");
+                }
+            }
+
+            if (old == OPERATOR)
+            {
+                /* OPERATOR_TO_WHITESPACE */
+                if(current == WHITESPACE)
+                {
+                    printf("imprime OPERATOR\n");
+                }
+                /* OPERATOR_TO_ALPHA */
+                if(current == ALPHA)
+                {
+                    printf("imprime OPERATOR\n");
+                }
+            }

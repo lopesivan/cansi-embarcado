@@ -1,0 +1,26 @@
+#
+# Fornecer uma interface para criação de famílias de objetos relacionados ou
+# dependentes sem especificar suas classes concretas.
+#
+
+Family:                     # Família de tipos
+- EstadoLampada             # Nome do tipo
+- Estados:                  # Nome da Família de tipos
+    - Ligada                # primeiro tipo definido
+    - Desligada
+
+AbstractFactory:            # Classe *AbstractFactory*
+- MinhaLampada:             # Nome da Classe *AbstractFactory*
+    - get                   # Método chamador
+    - SelecioneLampada:     # Primeiro método abstrato de *AbstractFactory*
+        - Lampada:          # 
+            - apertaPlug
+            - Liga
+            - Desliga
+
+ConcreteFactory:
+- ConcreteFactory1          # Cria o Produto A1
+- ConcreteFactory2          # Cria o Produto A2
+
+Client:
+- Cliente

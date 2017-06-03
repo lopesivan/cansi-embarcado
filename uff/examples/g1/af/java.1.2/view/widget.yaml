@@ -1,0 +1,52 @@
+#
+# Fornecer uma interface para criação de famílias de objetos relacionados ou
+# dependentes sem especificar suas classes concretas.
+# 
+
+# Na construção de um modelo Abstract Factory, devemos começar com uma boa
+# abordagem, eu aconselharia pela definição dos produtos abstratos, mas antes
+# é preciso definir uma família que designe os modos de operação.
+
+# Nada mais óbvio que nomear *Family* como "Family", ou algum nome genérico
+# que faça referência a família de objetos e ou classes que vamos abordar,
+# como por exemplo "Carros", "Bibliotecas", "Mamíferos" e outros. 
+#
+# Devemos dizer que tipo de família estamos representando, por exemplo,
+# no caso de uma família de carros teríamos a família de carros Sedan e a 
+# família de carros Populares. Já no caso de Bibliotecas, teríamos família do
+# tipo Qt e família do tipo Motif
+#
+Family:
+- Api
+- FamilyTypes:
+    - TypeQt
+    - TypeMotif
+
+# Como já definímos a família de objetos, devemos definir agora que tipo 
+# de produtos iremos querer, onde cada produto faz referência a uma família,
+# por exemplo no caso de uma Família de Bibliotecas, terímamos o produto
+# Janela e Botão onde cada tipo da Biblioteca teria uma Janela e um Botão
+AbstractProduct:
+- Window: draw    
+- ScrollBar: refresh
+
+AbstractFactory: 
+- WidgetFactory: 
+    - get
+    - CreateWindow 
+    - CreateScrollBar
+
+ConcreteFactory:
+- ConcreteFactoryQt
+- ConcreteFactoryMotif
+
+
+# O número de tipos X o número de AbstractProduct são o número de produtos.
+Product:
+- WindowQt
+- ScrollBarQt
+- WindowMotif
+- ScrollBarMotif
+
+Client: 
+- Client

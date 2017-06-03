@@ -1,0 +1,606 @@
+\documentclass[]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \usepackage{fontspec}
+  \ifxetex
+    \usepackage{xltxtra,xunicode}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+\usepackage{color}
+\usepackage{fancyvrb}
+\DefineShortVerb[commandchars=\\\{\}]{\|}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+            pdftitle={},
+            colorlinks=true,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Códigos}
+
+\section{Exemplo de \emph{Abstract Factory} Config.}
+
+Arquivo \emph{1.yaml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#}
+\CommentTok{# Fornecer uma interface para criação de famílias de objetos relacionados ou}
+\CommentTok{# dependentes sem especificar suas classes concretas.}
+\CommentTok{#}
+
+\FunctionTok{Family:}                     \CommentTok{# Família de tipos}
+\KeywordTok{-} \NormalTok{Family                    }\CommentTok{# Nome do tipo}
+\KeywordTok{-} \FunctionTok{FamilyTypes:}              \CommentTok{# Nome da Família de tipos}
+    \KeywordTok{-} \NormalTok{Type1                 }\CommentTok{# primeiro tipo definido}
+    \KeywordTok{-} \NormalTok{Type2}
+
+\FunctionTok{AbstractFactory:}            \CommentTok{# Classe *AbstractFactory*}
+\KeywordTok{-} \FunctionTok{AbstractFactory:}          \CommentTok{# Nome da Classe *AbstractFactory*}
+    \KeywordTok{-} \NormalTok{get                   }\CommentTok{# Método chamador}
+    \KeywordTok{-} \FunctionTok{CreateProductA:}       \CommentTok{# Primeiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{AbstractProductA:} \CommentTok{# }
+            \KeywordTok{-} \NormalTok{doIt}
+            \KeywordTok{-} \NormalTok{ProductA1}
+            \KeywordTok{-} \NormalTok{ProductA2}
+
+\FunctionTok{ConcreteFactory:}
+\KeywordTok{-} \NormalTok{ConcreteFactory1          }\CommentTok{# Cria o Produto A1}
+\KeywordTok{-} \NormalTok{ConcreteFactory2          }\CommentTok{# Cria o Produto A2}
+
+\FunctionTok{Client:}
+\KeywordTok{-} \NormalTok{Cliente}
+\end{Highlighting}
+\end{Shaded}
+
+\clearpage
+Arquivo \emph{2.yaml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#}
+\CommentTok{# Fornecer uma interface para criação de famílias de objetos relacionados ou}
+\CommentTok{# dependentes sem especificar suas classes concretas.}
+\CommentTok{#}
+
+\FunctionTok{Family:}                      \CommentTok{# Família de tipos}
+\KeywordTok{-} \NormalTok{Family                     }\CommentTok{# Nome do tipo}
+\KeywordTok{-} \FunctionTok{FamilyTypes:}               \CommentTok{# Nome da Família de tipos}
+    \KeywordTok{-} \NormalTok{Type1                  }\CommentTok{# primeiro tipo definido}
+    \KeywordTok{-} \NormalTok{Type2                  }\CommentTok{# segundo tipo definido}
+    \KeywordTok{-} \NormalTok{Type3                  }\CommentTok{# terceiro tipo definido}
+
+\FunctionTok{AbstractFactory:}            \CommentTok{# Classe *AbstractFactory*}
+\KeywordTok{-} \FunctionTok{AbstractFactory:}          \CommentTok{# Nome da Classe *AbstractFactory*}
+    \KeywordTok{-} \NormalTok{get                   }\CommentTok{# Método chamador}
+    \KeywordTok{-} \FunctionTok{CreateProductA:}       \CommentTok{# Primeiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{AbstractProductA:} \CommentTok{#}
+            \KeywordTok{-} \NormalTok{doIt}
+            \KeywordTok{-} \NormalTok{ProductA1}
+            \KeywordTok{-} \NormalTok{ProductA2}
+            \KeywordTok{-} \NormalTok{ProductA3}
+    \KeywordTok{-} \FunctionTok{CreateProductB:}       \CommentTok{# Segundo método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{AbstractProductB:}
+            \KeywordTok{-} \NormalTok{doTi}
+            \KeywordTok{-} \NormalTok{ProductB1}
+            \KeywordTok{-} \NormalTok{ProductB2}
+            \KeywordTok{-} \NormalTok{ProductB3}
+\CommentTok{#    - CreateProductC:       # Terceiro método abstrato de *AbstractFactory*}
+\CommentTok{#            - AbstractProductC:}
+\CommentTok{#                - doTI}
+\CommentTok{#                - ProductC1}
+\CommentTok{#                - ProductC2}
+
+\FunctionTok{ConcreteFactory:}
+\KeywordTok{-} \NormalTok{ConcreteFactory1           }\CommentTok{# Cria o Produto A1 e produto B1}
+\KeywordTok{-} \NormalTok{ConcreteFactory2           }\CommentTok{# CriaçãoProduto A2 e primeiroB2}
+\KeywordTok{-} \NormalTok{ConcreteFactory3           }\CommentTok{# CriaçãoProduto A3 e primeiroB3}
+
+\FunctionTok{Client:}
+\KeywordTok{-} \NormalTok{Client}
+\end{Highlighting}
+\end{Shaded}
+
+\clearpage
+Arquivo \emph{3.yaml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#}
+\CommentTok{# Fornecer uma interface para criação de famílias de objetos relacionados ou}
+\CommentTok{# dependentes sem especificar suas classes concretas.}
+\CommentTok{#}
+
+\FunctionTok{Family:}                      \CommentTok{# Família de tipos}
+\KeywordTok{-} \NormalTok{Family                     }\CommentTok{# Nome do tipo}
+\KeywordTok{-} \FunctionTok{FamilyTypes:}               \CommentTok{# Nome da Família de tipos}
+    \KeywordTok{-} \NormalTok{Type1                  }\CommentTok{# primeiro tipo definido}
+    \KeywordTok{-} \NormalTok{Type2                  }\CommentTok{# segundo tipo definido}
+    \KeywordTok{-} \NormalTok{Type3                  }\CommentTok{# terceiro tipo definido}
+
+\FunctionTok{AbstractFactory:}            \CommentTok{# Classe *AbstractFactory* }
+\KeywordTok{-} \FunctionTok{AbstractFactory:}          \CommentTok{# Nome da Classe *AbstractFactory*}
+    \KeywordTok{-} \NormalTok{get                   }\CommentTok{# Método chamador}
+    \KeywordTok{-} \FunctionTok{CreateProductA:}       \CommentTok{# Primeiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{AbstractProductA:} \CommentTok{#}
+            \KeywordTok{-} \NormalTok{doIt}
+            \KeywordTok{-} \NormalTok{ProductA1}
+            \KeywordTok{-} \NormalTok{ProductA2}
+            \KeywordTok{-} \NormalTok{ProductA3}
+    \KeywordTok{-} \FunctionTok{CreateProductB:}       \CommentTok{# Segundo método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{AbstractProductB:}
+            \KeywordTok{-} \NormalTok{doTi}
+            \KeywordTok{-} \NormalTok{ProductB1}
+            \KeywordTok{-} \NormalTok{ProductB2}
+            \KeywordTok{-} \NormalTok{ProductB3}
+    \KeywordTok{-} \FunctionTok{CreateProductC:}       \CommentTok{# Terceiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{AbstractProductC:}
+            \KeywordTok{-} \NormalTok{doTI}
+            \KeywordTok{-} \NormalTok{ProductC1}
+            \KeywordTok{-} \NormalTok{ProductC2}
+
+\FunctionTok{ConcreteFactory:}
+\KeywordTok{-} \NormalTok{ConcreteFactory1          }\CommentTok{# Cria o Produto A1, B1 e C1}
+\KeywordTok{-} \NormalTok{ConcreteFactory2          }\CommentTok{# CriaçãoProduto A2, B2 e C2}
+\KeywordTok{-} \NormalTok{ConcreteFactory3          }\CommentTok{# CriaçãoProduto A3, B3 e C3}
+
+\FunctionTok{Client:}
+\KeywordTok{-} \NormalTok{Client                    }\CommentTok{# Nome do arquivo principal}
+\end{Highlighting}
+\end{Shaded}
+
+\clearpage
+Arquivo \emph{4.yaml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#}
+\CommentTok{# Fornecer uma interface para criação de famílias de objetos relacionados ou}
+\CommentTok{# dependentes sem especificar suas classes concretas.}
+\CommentTok{#}
+
+\FunctionTok{Family:}                      \CommentTok{# Família de tipos}
+\KeywordTok{-} \NormalTok{Api                        }\CommentTok{# Nome do tipo}
+\KeywordTok{-} \FunctionTok{FamilyTypes:}               \CommentTok{# Nome da Família de tipos}
+    \KeywordTok{-} \NormalTok{TypeQt                 }\CommentTok{# primeiro tipo definido}
+    \KeywordTok{-} \NormalTok{TypeMotif              }\CommentTok{# segundo tipo definido}
+
+\FunctionTok{AbstractFactory:}             \CommentTok{# Classe *AbstractFactory* }
+\KeywordTok{-} \FunctionTok{AbstractFactory:}           \CommentTok{# Nome da Classe *AbstractFactory*}
+    \KeywordTok{-} \NormalTok{get                    }\CommentTok{# Método chamador}
+    \KeywordTok{-} \FunctionTok{CreateWindow:}          \CommentTok{# Primeiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{AbstractWindow:}    \CommentTok{#}
+            \KeywordTok{-} \NormalTok{doIt}
+            \KeywordTok{-} \NormalTok{WindowQt}
+            \KeywordTok{-} \NormalTok{WindowMotif}
+    \KeywordTok{-} \FunctionTok{CreateScrollBar:}       \CommentTok{# Segundo método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{AbstractScrollBar:}
+            \KeywordTok{-} \NormalTok{doTi}
+            \KeywordTok{-} \NormalTok{ScrollBarQt}
+            \KeywordTok{-} \NormalTok{ScrollBarMotif}
+    \KeywordTok{-} \FunctionTok{CreateColor:}           \CommentTok{# Terceiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{AbstractColor:}
+            \KeywordTok{-} \NormalTok{doTI}
+            \KeywordTok{-} \NormalTok{ColorQt}
+            \KeywordTok{-} \NormalTok{ColorMotif}
+
+\FunctionTok{ConcreteFactory:}
+\KeywordTok{-} \NormalTok{FactoryQt                  }\CommentTok{# Cria o Produto AQt, BQt e CQt}
+\KeywordTok{-} \NormalTok{FactoryMotif               }\CommentTok{# CriaçãoProduto AMotif, BMotif e CMotif}
+
+\FunctionTok{Client:}
+\KeywordTok{-} \NormalTok{Client                     }\CommentTok{# Nome do arquivo principal}
+\end{Highlighting}
+\end{Shaded}
+
+\clearpage
+Arquivo \emph{5.yaml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#}
+\CommentTok{# Fornecer uma interface para criação de famílias de objetos relacionados ou}
+\CommentTok{# dependentes sem especificar suas classes concretas.}
+\CommentTok{#}
+
+\FunctionTok{Family:}                      \CommentTok{# Família de tipos}
+\KeywordTok{-} \NormalTok{Api                        }\CommentTok{# Nome do tipo}
+\KeywordTok{-} \FunctionTok{ApiTypes:}                  \CommentTok{# Nome da Família de tipos}
+    \KeywordTok{-} \NormalTok{Qt                     }\CommentTok{# primeiro tipo definido}
+    \KeywordTok{-} \NormalTok{Motif                  }\CommentTok{# segundo tipo definido}
+
+\FunctionTok{AbstractFactory:}             \CommentTok{# Classe *AbstractFactory* }
+\KeywordTok{-} \FunctionTok{Widget:}                    \CommentTok{# Nome da Classe *AbstractFactory*}
+    \KeywordTok{-} \NormalTok{get                    }\CommentTok{# Método chamador}
+    \KeywordTok{-} \FunctionTok{CreateWindow:}          \CommentTok{# Primeiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{Window:}            \CommentTok{#}
+            \KeywordTok{-} \NormalTok{doIt}
+            \KeywordTok{-} \NormalTok{WindowQt}
+            \KeywordTok{-} \NormalTok{WindowMotif}
+    \KeywordTok{-} \FunctionTok{CreateScrollBar:}       \CommentTok{# Segundo método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{ScrollBar:}
+            \KeywordTok{-} \NormalTok{doTi}
+            \KeywordTok{-} \NormalTok{ScrollBarQt}
+            \KeywordTok{-} \NormalTok{ScrollBarMotif}
+    \KeywordTok{-} \FunctionTok{CreateColor:}           \CommentTok{# Terceiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{Color:}
+            \KeywordTok{-} \NormalTok{doTI}
+            \KeywordTok{-} \NormalTok{ColorQt}
+            \KeywordTok{-} \NormalTok{ColorMotif}
+
+\FunctionTok{ConcreteFactory:}
+\KeywordTok{-} \NormalTok{FactoryQt                  }\CommentTok{# Cria o Produto AQt, BQt e CQt}
+\KeywordTok{-} \NormalTok{FactoryMotif               }\CommentTok{# CriaçãoProduto AMotif, BMotif e CMotif}
+
+\FunctionTok{Client:}
+\KeywordTok{-} \NormalTok{Client                     }\CommentTok{# Nome do arquivo principal}
+\end{Highlighting}
+\end{Shaded}
+
+\clearpage
+Arquivo \emph{Calculadora.yaml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#}
+\CommentTok{# Fornecer uma interface para criação de famílias de objetos relacionados ou}
+\CommentTok{# dependentes sem especificar suas classes concretas.}
+\CommentTok{#}
+
+\FunctionTok{Family:}                     \CommentTok{# Família de tipos}
+\KeywordTok{-} \NormalTok{Operacoes                 }\CommentTok{# Nome do tipo}
+\KeywordTok{-} \FunctionTok{TiposDeOperacoes:}         \CommentTok{# Nome da Família de tipos}
+    \KeywordTok{-} \NormalTok{Soma                  }\CommentTok{# primeiro tipo definido}
+    \KeywordTok{-} \NormalTok{Subtracao}
+    \KeywordTok{-} \NormalTok{Divisao}
+    \KeywordTok{-} \NormalTok{Multiplicacao}
+
+\FunctionTok{AbstractFactory:}            \CommentTok{# Classe *AbstractFactory*}
+\KeywordTok{-} \FunctionTok{Calculadora:}              \CommentTok{# Nome da Classe *AbstractFactory*}
+    \KeywordTok{-} \NormalTok{get                   }\CommentTok{# Método chamador}
+    \KeywordTok{-} \FunctionTok{Solucao:}              \CommentTok{# Primeiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{OperacaoMatematica:} \CommentTok{#}
+            \KeywordTok{-} \NormalTok{calcula}
+            \KeywordTok{-} \NormalTok{Soma}
+            \KeywordTok{-} \NormalTok{Subtracao}
+            \KeywordTok{-} \NormalTok{Divisao}
+            \KeywordTok{-} \NormalTok{Multiplicacao}
+
+\FunctionTok{ConcreteFactory:}
+\KeywordTok{-} \NormalTok{oSoma             }\CommentTok{# Cria o Produto A1}
+\KeywordTok{-} \NormalTok{oSubtracao        }\CommentTok{# Cria o Produto A2}
+\KeywordTok{-} \NormalTok{oDivisao          }\CommentTok{# Cria o Produto A2}
+\KeywordTok{-} \NormalTok{oMultiplicacao    }\CommentTok{# Cria o Produto A2}
+
+\FunctionTok{Client:}
+\KeywordTok{-} \NormalTok{Cliente}
+\end{Highlighting}
+\end{Shaded}
+
+\clearpage
+Arquivo \emph{fabricaX.yaml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#}
+\CommentTok{# Fornecer uma interface para criação de famílias de objetos relacionados ou}
+\CommentTok{# dependentes sem especificar suas classes concretas.}
+\CommentTok{#}
+
+\FunctionTok{Family:}                     \CommentTok{# Família de tipos}
+\KeywordTok{-} \NormalTok{Materiais                 }\CommentTok{# Nome do tipo}
+\KeywordTok{-} \FunctionTok{TiposDeMateriais:}         \CommentTok{# Nome da Família de tipos}
+    \KeywordTok{-} \NormalTok{Ferro                 }\CommentTok{# primeiro tipo definido}
+    \KeywordTok{-} \NormalTok{Madeira}
+    \KeywordTok{-} \NormalTok{Plastico}
+
+\FunctionTok{AbstractFactory:}            \CommentTok{# Classe *AbstractFactory*}
+\KeywordTok{-} \FunctionTok{FabricaX:}                 \CommentTok{# Nome da Classe *AbstractFactory*}
+    \KeywordTok{-} \NormalTok{get                   }\CommentTok{# Método chamador}
+    \KeywordTok{-} \FunctionTok{CreateCadeira:}        \CommentTok{# Primeiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{Cadeira:}          \CommentTok{# }
+            \KeywordTok{-} \NormalTok{doIt}
+            \KeywordTok{-} \NormalTok{CadeiraDeFerro}
+            \KeywordTok{-} \NormalTok{CadeiraDeMadeira}
+            \KeywordTok{-} \NormalTok{CadeiraDePlastico}
+
+\FunctionTok{ConcreteFactory:}
+\KeywordTok{-} \NormalTok{Ferro      }\CommentTok{# Cria o Produto A1}
+\KeywordTok{-} \NormalTok{Madeira    }\CommentTok{# Cria o Produto A2}
+\KeywordTok{-} \NormalTok{Plastico   }\CommentTok{# Cria o Produto A2}
+
+\FunctionTok{Client:}
+\KeywordTok{-} \NormalTok{Cliente}
+\end{Highlighting}
+\end{Shaded}
+
+\clearpage
+Arquivo \emph{fabricaY.yaml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#}
+\CommentTok{# Fornecer uma interface para criação de famílias de objetos relacionados ou}
+\CommentTok{# dependentes sem especificar suas classes concretas.}
+\CommentTok{#}
+
+\FunctionTok{Family:}                     \CommentTok{# Família de tipos}
+\KeywordTok{-} \NormalTok{Materiais                 }\CommentTok{# Nome do tipo}
+\KeywordTok{-} \FunctionTok{TiposDeMateriais:}         \CommentTok{# Nome da Família de tipos}
+    \KeywordTok{-} \NormalTok{Ferro                 }\CommentTok{# primeiro tipo definido}
+    \KeywordTok{-} \NormalTok{Madeira}
+    \KeywordTok{-} \NormalTok{Plastico}
+
+\FunctionTok{AbstractFactory:}            \CommentTok{# Classe *AbstractFactory*}
+\KeywordTok{-} \FunctionTok{FabricaX:}                 \CommentTok{# Nome da Classe *AbstractFactory*}
+    \KeywordTok{-} \NormalTok{get                   }\CommentTok{# Método chamador}
+    \KeywordTok{-} \FunctionTok{CreateCadeira:}        \CommentTok{# Primeiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{Cadeira:}          \CommentTok{# }
+            \KeywordTok{-} \NormalTok{doIt}
+            \KeywordTok{-} \NormalTok{CadeiraDeFerro}
+            \KeywordTok{-} \NormalTok{CadeiraDeMadeira}
+            \KeywordTok{-} \NormalTok{CadeiraDePlastico}
+    \KeywordTok{-} \FunctionTok{CreatePorta:}          \CommentTok{# Primeiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{Porta:}            \CommentTok{# }
+            \KeywordTok{-} \NormalTok{doIt}
+            \KeywordTok{-} \NormalTok{PortaDeFerro}
+            \KeywordTok{-} \NormalTok{PortaDeMadeira}
+            \KeywordTok{-} \NormalTok{PortaDePlastico}
+    \KeywordTok{-} \FunctionTok{CreateCabide:}        \CommentTok{# Primeiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{Cabide:}          \CommentTok{# }
+            \KeywordTok{-} \NormalTok{doIt}
+            \KeywordTok{-} \NormalTok{CabideDeFerro}
+            \KeywordTok{-} \NormalTok{CabideDeMadeira}
+            \KeywordTok{-} \NormalTok{CabideDePlastico}
+    \KeywordTok{-} \FunctionTok{CreateCamas:}        \CommentTok{# Primeiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{Camas:}          \CommentTok{# }
+            \KeywordTok{-} \NormalTok{doIt}
+            \KeywordTok{-} \NormalTok{CamasDeFerro}
+            \KeywordTok{-} \NormalTok{CamasDeMadeira}
+            \KeywordTok{-} \NormalTok{CamasDePlastico}
+
+\FunctionTok{ConcreteFactory:}
+\KeywordTok{-} \NormalTok{Ferro      }\CommentTok{# Cria o Produto A1}
+\KeywordTok{-} \NormalTok{Madeira    }\CommentTok{# Cria o Produto A2}
+\KeywordTok{-} \NormalTok{Plastico   }\CommentTok{# Cria o Produto A2}
+
+\FunctionTok{Client:}
+\KeywordTok{-} \NormalTok{Cliente}
+\end{Highlighting}
+\end{Shaded}
+
+\clearpage
+Arquivo \emph{onOff.yaml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#}
+\CommentTok{# Fornecer uma interface para criação de famílias de objetos relacionados ou}
+\CommentTok{# dependentes sem especificar suas classes concretas.}
+\CommentTok{#}
+
+\FunctionTok{Family:}                     \CommentTok{# Família de tipos}
+\KeywordTok{-} \NormalTok{EstadoLampada             }\CommentTok{# Nome do tipo}
+\KeywordTok{-} \FunctionTok{Estados:}                  \CommentTok{# Nome da Família de tipos}
+    \KeywordTok{-} \NormalTok{Ligada                }\CommentTok{# primeiro tipo definido}
+    \KeywordTok{-} \NormalTok{Desligada}
+
+\FunctionTok{AbstractFactory:}            \CommentTok{# Classe *AbstractFactory*}
+\KeywordTok{-} \FunctionTok{MinhaLampada:}             \CommentTok{# Nome da Classe *AbstractFactory*}
+    \KeywordTok{-} \NormalTok{get                   }\CommentTok{# Método chamador}
+    \KeywordTok{-} \FunctionTok{SelecioneLampada:}     \CommentTok{# Primeiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{Lampada:}          \CommentTok{# }
+            \KeywordTok{-} \NormalTok{apertaPlug}
+            \KeywordTok{-} \NormalTok{Liga}
+            \KeywordTok{-} \NormalTok{Desliga}
+
+\FunctionTok{ConcreteFactory:}
+\KeywordTok{-} \NormalTok{ConcreteFactory1          }\CommentTok{# Cria o Produto A1}
+\KeywordTok{-} \NormalTok{ConcreteFactory2          }\CommentTok{# Cria o Produto A2}
+
+\FunctionTok{Client:}
+\KeywordTok{-} \NormalTok{Cliente}
+\end{Highlighting}
+\end{Shaded}
+
+\clearpage
+Arquivo \emph{Perfumes.yaml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#}
+\CommentTok{# Fornecer uma interface para criação de famílias de objetos relacionados ou}
+\CommentTok{# dependentes sem especificar suas classes concretas.}
+\CommentTok{#}
+
+\FunctionTok{Family:}                     \CommentTok{# Família de tipos}
+\KeywordTok{-} \NormalTok{Perfume                   }\CommentTok{# Nome do tipo}
+\KeywordTok{-} \FunctionTok{sexo:}                     \CommentTok{# Nome da Família de tipos}
+    \KeywordTok{-} \NormalTok{Masculinos            }\CommentTok{# primeiro tipo definido}
+    \KeywordTok{-} \NormalTok{Femininos}
+
+\FunctionTok{AbstractFactory:}            \CommentTok{# Classe *AbstractFactory*}
+\KeywordTok{-} \FunctionTok{Boticario:}                \CommentTok{# Nome da Classe *AbstractFactory*}
+    \KeywordTok{-} \NormalTok{get                   }\CommentTok{# Método chamador}
+    \KeywordTok{-} \FunctionTok{PerfumesDeVerao:}      \CommentTok{# Primeiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{Colonias:}         \CommentTok{#}
+            \KeywordTok{-} \NormalTok{doIt}
+            \KeywordTok{-} \NormalTok{ColoniaMasculina}
+            \KeywordTok{-} \NormalTok{ColoniaFeminina}
+
+\FunctionTok{ConcreteFactory:}
+\KeywordTok{-} \NormalTok{ConcreteFactory1          }\CommentTok{# Cria o Produto A1}
+\KeywordTok{-} \NormalTok{ConcreteFactory2          }\CommentTok{# Cria o Produto A2}
+
+\FunctionTok{Client:}
+\KeywordTok{-} \NormalTok{Cliente}
+\end{Highlighting}
+\end{Shaded}
+
+\clearpage
+Arquivo \emph{simple.yaml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#}
+\CommentTok{# Fornecer uma interface para criação de famílias de objetos relacionados ou}
+\CommentTok{# dependentes sem especificar suas classes concretas.}
+\CommentTok{#}
+
+\FunctionTok{Family:}                     \CommentTok{# Família de tipos}
+\KeywordTok{-} \NormalTok{Family                    }\CommentTok{# Nome do tipo}
+\KeywordTok{-} \FunctionTok{FamilyTypes:}              \CommentTok{# Nome da Família de tipos}
+    \KeywordTok{-} \NormalTok{Type1                 }\CommentTok{# primeiro tipo definido}
+
+\FunctionTok{AbstractFactory:}            \CommentTok{# Classe *AbstractFactory*}
+\KeywordTok{-} \FunctionTok{AbstractFactory:}          \CommentTok{# Nome da Classe *AbstractFactory*}
+    \KeywordTok{-} \NormalTok{get                   }\CommentTok{# Método chamador}
+    \KeywordTok{-} \FunctionTok{CreateProductA:}       \CommentTok{# Primeiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{AbstractProductA:} \CommentTok{# }
+            \KeywordTok{-} \NormalTok{doIt}
+            \KeywordTok{-} \NormalTok{ProductA1}
+
+\FunctionTok{ConcreteFactory:}
+\KeywordTok{-} \NormalTok{ConcreteFactory1          }\CommentTok{# Cria o Produto A1}
+
+\FunctionTok{Client:}
+\KeywordTok{-} \NormalTok{Cliente}
+\end{Highlighting}
+\end{Shaded}
+
+\clearpage
+Arquivo \emph{widget.yaml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#}
+\CommentTok{# Fornecer uma interface para criação de famílias de objetos relacionados ou}
+\CommentTok{# dependentes sem especificar suas classes concretas.}
+\CommentTok{#}
+
+\FunctionTok{Family:}                      \CommentTok{# Família de tipos}
+\KeywordTok{-} \NormalTok{Api                        }\CommentTok{# Nome do tipo}
+\KeywordTok{-} \FunctionTok{FamilyTypes:}               \CommentTok{# Nome da Família de tipos}
+    \KeywordTok{-} \NormalTok{TypeQt                 }\CommentTok{# primeiro tipo definido}
+    \KeywordTok{-} \NormalTok{TypeMotif              }\CommentTok{# segundo tipo definido}
+
+\FunctionTok{AbstractFactory:}             \CommentTok{# Classe *AbstractFactory* }
+\KeywordTok{-} \FunctionTok{AbstractFactory:}           \CommentTok{# Nome da Classe *AbstractFactory*}
+    \KeywordTok{-} \NormalTok{get                    }\CommentTok{# Método chamador}
+    \KeywordTok{-} \FunctionTok{CreateWindow:}          \CommentTok{# Primeiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{AbstractWindow:}    \CommentTok{#}
+            \KeywordTok{-} \NormalTok{doIt}
+            \KeywordTok{-} \NormalTok{WindowQt}
+            \KeywordTok{-} \NormalTok{WindowMotif}
+    \KeywordTok{-} \FunctionTok{CreateScrollBar:}       \CommentTok{# Segundo método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{AbstractScrollBar:}
+            \KeywordTok{-} \NormalTok{doTi}
+            \KeywordTok{-} \NormalTok{ScrollBarQt}
+            \KeywordTok{-} \NormalTok{ScrollBarMotif}
+    \KeywordTok{-} \FunctionTok{CreateColor:}           \CommentTok{# Terceiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{AbstractColor:}
+            \KeywordTok{-} \NormalTok{doTI}
+            \KeywordTok{-} \NormalTok{ColorQt}
+            \KeywordTok{-} \NormalTok{ColorMotif}
+
+\FunctionTok{ConcreteFactory:}
+\KeywordTok{-} \NormalTok{FactoryQt                  }\CommentTok{# Cria o Produto AQt, BQt e CQt}
+\KeywordTok{-} \NormalTok{FactoryMotif               }\CommentTok{# CriaçãoProduto AMotif, BMotif e CMotif}
+
+\FunctionTok{Client:}
+\KeywordTok{-} \NormalTok{Client                     }\CommentTok{# Nome do arquivo principal}
+\end{Highlighting}
+\end{Shaded}
+
+\clearpage
+Arquivo \emph{Widget.yaml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#}
+\CommentTok{# Fornecer uma interface para criação de famílias de objetos relacionados ou}
+\CommentTok{# dependentes sem especificar suas classes concretas.}
+\CommentTok{#}
+
+\FunctionTok{Family:}                      \CommentTok{# Família de tipos}
+\KeywordTok{-} \NormalTok{Api                        }\CommentTok{# Nome do tipo}
+\KeywordTok{-} \FunctionTok{FamilyTypes:}               \CommentTok{# Nome da Família de tipos}
+    \KeywordTok{-} \NormalTok{TypeQt                 }\CommentTok{# primeiro tipo definido}
+    \KeywordTok{-} \NormalTok{TypeMotif              }\CommentTok{# segundo tipo definido}
+
+\FunctionTok{AbstractFactory:}             \CommentTok{# Classe *AbstractFactory* }
+\KeywordTok{-} \FunctionTok{AbstractFactory:}           \CommentTok{# Nome da Classe *AbstractFactory*}
+    \KeywordTok{-} \NormalTok{get                    }\CommentTok{# Método chamador}
+    \KeywordTok{-} \FunctionTok{CreateWindow:}          \CommentTok{# Primeiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{Window:}            \CommentTok{#}
+            \KeywordTok{-} \NormalTok{draw}
+            \KeywordTok{-} \NormalTok{WindowQt}
+            \KeywordTok{-} \NormalTok{WindowMotif}
+    \KeywordTok{-} \FunctionTok{CreateScrollBar:}       \CommentTok{# Segundo método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{ScrollBar:}
+            \KeywordTok{-} \NormalTok{draw}
+            \KeywordTok{-} \NormalTok{ScrollBarQt}
+            \KeywordTok{-} \NormalTok{ScrollBarMotif}
+    \KeywordTok{-} \FunctionTok{CreateColor:}           \CommentTok{# Terceiro método abstrato de *AbstractFactory*}
+        \KeywordTok{-} \FunctionTok{Color:}
+            \KeywordTok{-} \NormalTok{setColor}
+            \KeywordTok{-} \NormalTok{ColorQt}
+            \KeywordTok{-} \NormalTok{ColorMotif}
+
+\FunctionTok{ConcreteFactory:}
+\KeywordTok{-} \NormalTok{FactoryQt                  }\CommentTok{# Cria o Produto AQt, BQt e CQt}
+\KeywordTok{-} \NormalTok{FactoryMotif               }\CommentTok{# CriaçãoProduto AMotif, BMotif e CMotif}
+
+\FunctionTok{Client:}
+\KeywordTok{-} \NormalTok{Client                     }\CommentTok{# Nome do arquivo principal}
+\end{Highlighting}
+\end{Shaded}
+
+\clearpage
+
+\end{document}

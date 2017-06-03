@@ -1,0 +1,36 @@
+#
+# Fornecer uma interface para criação de famílias de objetos relacionados ou
+# dependentes sem especificar suas classes concretas.
+#
+
+Family:                      # Família de tipos
+- Api                        # Nome do tipo
+- FamilyTypes:               # Nome da Família de tipos
+    - TypeQt                 # primeiro tipo definido
+    - TypeMotif              # segundo tipo definido
+
+AbstractFactory:             # Classe *AbstractFactory* 
+- AbstractFactory:           # Nome da Classe *AbstractFactory*
+    - get                    # Método chamador
+    - CreateWindow:          # Primeiro método abstrato de *AbstractFactory*
+        - AbstractWindow:    #
+            - doIt
+            - WindowQt
+            - WindowMotif
+    - CreateScrollBar:       # Segundo método abstrato de *AbstractFactory*
+        - AbstractScrollBar:
+            - doTi
+            - ScrollBarQt
+            - ScrollBarMotif
+    - CreateColor:           # Terceiro método abstrato de *AbstractFactory*
+        - AbstractColor:
+            - doTI
+            - ColorQt
+            - ColorMotif
+
+ConcreteFactory:
+- FactoryQt                  # Cria o Produto AQt, BQt e CQt
+- FactoryMotif               # CriaçãoProduto AMotif, BMotif e CMotif
+
+Client:
+- Client                     # Nome do arquivo principal

@@ -1,0 +1,40 @@
+#
+# Fornecer uma interface para criação de famílias de objetos relacionados ou
+# dependentes sem especificar suas classes concretas.
+#
+
+Family:
+- Family
+- FamilyTypes:
+    - TypeFamily
+    - Type2
+    - Type3
+
+AbstractFactory:
+- AbstractFactory:          # Classe *AbstractFactory*
+    - get                   # Método chamador
+    - CreateJavaClass:      # Primeiro método abstrato de *AbstractFactory*
+        - Java:             #
+            - doIt
+            - JavaClassFamily
+            - JavaClass2
+            - JavaClass3
+    - CreateProductB:       # Segundo método abstrato de *AbstractFactory*
+        - AbstractProductB:
+            - doTi
+            - ProductBFamily
+            - ProductB2
+            - ProductB3
+#    - CreateProductC:       # Terceiro método abstrato de *AbstractFactory*
+#            - AbstractProductC:
+#                - doTI
+#                - ProductCFamily
+#                - ProductC2
+
+ConcreteFactory:
+- ConcreteFactoryFamily
+- ConcreteFactory2
+- ConcreteFactory3
+
+Client:
+- Client

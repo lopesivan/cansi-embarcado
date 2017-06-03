@@ -1,0 +1,23 @@
+{
+  "*": {
+    "make": "make -C build"
+  },
+  "CMakeLists.txt": {
+    "type": "cmake"
+  },
+  "include/*.h": {
+    "type": "include",
+    "skeleton": "cansiheader",
+    "alternate": "source/{}.c"
+  },
+  "source/*.c": {
+    "type": "source",
+    "skeleton": "cansisource",
+    "alternate": "include/{}.h"
+  },
+  "examples/list/*.c": {
+    "type": "list",
+    "skeleton": "cansimainsource",
+    "alternate": "{}.h"
+  }
+}

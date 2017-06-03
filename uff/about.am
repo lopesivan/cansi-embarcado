@@ -1,0 +1,5 @@
+bin_PROGRAMS    = about
+include_HEADERS = \
+	config.h
+about_SOURCES   = \
+	about.c

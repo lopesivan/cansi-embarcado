@@ -1,0 +1,13 @@
+{
+  "*.h": {
+    "type": "include",
+    "skeleton": "cansiheader",
+    "alternate": "{}.c"
+  },
+  "*.c": {
+    "type": "source",
+    "skeleton": "cansisource",
+    "alternate": "{}.h"
+  }
+}
+

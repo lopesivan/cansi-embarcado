@@ -1,0 +1,15 @@
+{
+  "*.h": {
+    "type": "inc",
+    "skeleton": "cansiheader",
+    "alternate": "{}.c"
+  },
+  "*.c": {
+    "type": "src",
+    "skeleton": "cansisource",
+    "dispatch": "make {}",
+    "start": "./{}",
+    "alternate": "{}.h"
+  }
+}
+

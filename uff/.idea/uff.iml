@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CPP_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/examples/tree/ex-1.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/bitree.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/list.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/traverse.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/source/bitree.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/source/list.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/source/traverse.c" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="Header Search Paths">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/include" />
+          <root url="file:///usr/include" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include/objc" />
+          <root url="file:///usr/local/include" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/include" />
+          <root url="file:///usr/include" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include/objc" />
+          <root url="file:///usr/local/include" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/include/list.h" />
+          <root url="file://$MODULE_DIR$/include/traverse.h" />
+          <root url="file://$MODULE_DIR$/include/bitree.h" />
+        </excluded>
+      </library>
+    </orderEntry>
+  </component>
+</module>

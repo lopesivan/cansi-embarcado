@@ -1,0 +1,47 @@
+#
+# Fornecer uma interface para criação de famílias de objetos relacionados ou
+# dependentes sem especificar suas classes concretas.
+#
+
+Family:                     # Família de tipos
+- Materiais                 # Nome do tipo
+- TiposDeMateriais:         # Nome da Família de tipos
+    - Ferro                 # primeiro tipo definido
+    - Madeira
+    - Plastico
+
+AbstractFactory:            # Classe *AbstractFactory*
+- FabricaX:                 # Nome da Classe *AbstractFactory*
+    - get                   # Método chamador
+    - CreateCadeira:        # Primeiro método abstrato de *AbstractFactory*
+        - Cadeira:          # 
+            - doIt
+            - CadeiraDeFerro
+            - CadeiraDeMadeira
+            - CadeiraDePlastico
+    - CreatePorta:          # Primeiro método abstrato de *AbstractFactory*
+        - Porta:            # 
+            - doIt
+            - PortaDeFerro
+            - PortaDeMadeira
+            - PortaDePlastico
+    - CreateCabide:        # Primeiro método abstrato de *AbstractFactory*
+        - Cabide:          # 
+            - doIt
+            - CabideDeFerro
+            - CabideDeMadeira
+            - CabideDePlastico
+    - CreateCamas:        # Primeiro método abstrato de *AbstractFactory*
+        - Camas:          # 
+            - doIt
+            - CamasDeFerro
+            - CamasDeMadeira
+            - CamasDePlastico
+
+ConcreteFactory:
+- Ferro      # Cria o Produto A1
+- Madeira    # Cria o Produto A2
+- Plastico   # Cria o Produto A2
+
+Client:
+- Cliente

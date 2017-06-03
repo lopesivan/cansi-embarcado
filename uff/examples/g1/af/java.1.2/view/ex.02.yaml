@@ -1,0 +1,40 @@
+#
+# Fornecer uma interface para criação de famílias de objetos relacionados ou
+# dependentes sem especificar suas classes concretas.
+#
+
+Family:
+- Api
+- FamilyTypes:
+    - TypeQt
+    - TypeMotif
+    - TypeiWindows
+
+AbstractFactory:
+- Widget:                   # Classe *AbstractFactory*
+    - getApi                # Método chamador 
+    - CriarJanela:          # Primeiro método abstrato de *AbstractFactory*
+        - Janela: # 
+            - ativar
+            - JanelaQt
+            - JanelaMotif
+            - JanelaWindows
+    - CriarPorta:       # Segundo método abstrato de *AbstractFactory*
+        - Porta: 
+            - rativ
+            - PortaQt
+            - PortaMotif
+            - PortaWindows
+#    - CreateProductC:       # Terceiro método abstrato de *AbstractFactory*
+#            - AbstractProductC:
+#                - doTI
+#                - ProductC1
+#                - ProductC2
+
+ConcreteFactory:
+- WidgetQt
+- WidgetMotif
+- WidgetWindows
+
+Client:
+- Client

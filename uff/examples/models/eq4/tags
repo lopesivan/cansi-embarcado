@@ -1,0 +1,287 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ABS	util.h	15;"	d
+ACLOCAL	Makefile	/^ACLOCAL = ${SHELL} \/workspace\/uff\/build-aux\/missing aclocal-1.14$/;"	m
+ACLOCAL_M4	Makefile	/^ACLOCAL_M4 = $(top_srcdir)\/aclocal.m4$/;"	m
+AMTAR	Makefile	/^AMTAR = $${TAR-tar}$/;"	m
+AM_DEFAULT_VERBOSITY	Makefile	/^AM_DEFAULT_VERBOSITY = 1$/;"	m
+AM_V_CC	Makefile	/^AM_V_CC = $(am__v_CC_$(V))$/;"	m
+AM_V_CCLD	Makefile	/^AM_V_CCLD = $(am__v_CCLD_$(V))$/;"	m
+AM_V_GEN	Makefile	/^AM_V_GEN = $(am__v_GEN_$(V))$/;"	m
+AM_V_P	Makefile	/^AM_V_P = $(am__v_P_$(V))$/;"	m
+AM_V_at	Makefile	/^AM_V_at = $(am__v_at_$(V))$/;"	m
+AM_V_lt	Makefile	/^AM_V_lt = $(am__v_lt_$(V))$/;"	m
+AR	Makefile	/^AR = ar$/;"	m
+ARRAY_H	array.h	2;"	d
+AUTOCONF	Makefile	/^AUTOCONF = ${SHELL} \/workspace\/uff\/build-aux\/missing autoconf$/;"	m
+AUTOHEADER	Makefile	/^AUTOHEADER = ${SHELL} \/workspace\/uff\/build-aux\/missing autoheader$/;"	m
+AUTOMAKE	Makefile	/^AUTOMAKE = ${SHELL} \/workspace\/uff\/build-aux\/missing automake-1.14$/;"	m
+AWK	Makefile	/^AWK = gawk$/;"	m
+Array	array.h	/^typedef Scalar*              Array;$/;"	t
+Array1d	array.h	/^typedef Scalar*              Array1d;$/;"	t
+Array1d	ex-1.c	/^typedef Scalar*              Array1d;$/;"	t	file:
+Array2d	array.h	/^typedef Scalar**             Array2d;$/;"	t
+Array2d	ex-1.c	/^typedef Scalar**             Array2d;$/;"	t	file:
+Array3d	array.h	/^typedef Scalar***            Array3d;$/;"	t
+Array3d	ex-1.c	/^typedef Scalar***            Array3d;$/;"	t	file:
+Array4d	array.h	/^typedef Scalar****           Array4d;$/;"	t
+Array4d	ex-1.c	/^typedef Scalar****           Array4d;$/;"	t	file:
+Array5d	array.h	/^typedef Scalar*****          Array5d;$/;"	t
+Array5d	ex-1.c	/^typedef Scalar*****          Array5d;$/;"	t	file:
+CC	Makefile	/^CC = gcc$/;"	m
+CCDEPMODE	Makefile	/^CCDEPMODE = depmode=gcc3$/;"	m
+CCLD	Makefile	/^CCLD = $(CC)$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -O2$/;"	m
+COMPILE	Makefile	/^COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \\$/;"	m
+COMPLEX	complex.h	2;"	d
+CONFIG_CLEAN_FILES	Makefile	/^CONFIG_CLEAN_FILES =$/;"	m
+CONFIG_CLEAN_VPATH_FILES	Makefile	/^CONFIG_CLEAN_VPATH_FILES =$/;"	m
+CONFIG_HEADER	Makefile	/^CONFIG_HEADER = $(top_builddir)\/config.h$/;"	m
+CPP	Makefile	/^CPP = gcc -E$/;"	m
+CPPFLAGS	Makefile	/^CPPFLAGS = $/;"	m
+CTAGS	Makefile	/^CTAGS = ctags$/;"	m
+CUBE	util.h	12;"	d
+CYGPATH_W	Makefile	/^CYGPATH_W = echo$/;"	m
+Column	array.h	/^typedef const unsigned long  Column;$/;"	t
+DATATYPE_H	datatype.h	2;"	d
+DECNUMDIGITS	datatype.h	5;"	d
+DEFAULT_INCLUDES	Makefile	/^DEFAULT_INCLUDES = -I. -I$(top_builddir)$/;"	m
+DEFS	Makefile	/^DEFS = -DHAVE_CONFIG_H$/;"	m
+DEPDIR	Makefile	/^DEPDIR = .deps$/;"	m
+DISTFILES	Makefile	/^DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)$/;"	m
+DIST_COMMON	Makefile	/^DIST_COMMON = $(srcdir)\/Makefile.in $(srcdir)\/Makefile.am \\$/;"	m
+DIST_SOURCES	Makefile	/^DIST_SOURCES = $(main_SOURCES)$/;"	m
+ECHO_C	Makefile	/^ECHO_C = $/;"	m
+ECHO_N	Makefile	/^ECHO_N = -n$/;"	m
+ECHO_T	Makefile	/^ECHO_T = $/;"	m
+EGREP	Makefile	/^EGREP = \/bin\/grep -E$/;"	m
+EQ2_H	eq2.h	2;"	d
+EQ3_H	eq3.h	2;"	d
+EQ4_H	eq4.h	2;"	d
+EQN_EPS	util.h	27;"	d
+ETAGS	Makefile	/^ETAGS = etags$/;"	m
+EXCEPT_H	except.h	2;"	d
+EXEEXT	Makefile	/^EXEEXT = $/;"	m
+GREP	Makefile	/^GREP = \/bin\/grep$/;"	m
+HEADERS	Makefile	/^HEADERS = $(include_HEADERS)$/;"	m
+INDEX_OF_ARRAY2D	array.h	20;"	d
+INDEX_OF_ARRAY2D	ex-1.c	16;"	d	file:
+INDEX_OF_ARRAY3D	array.h	21;"	d
+INDEX_OF_ARRAY3D	ex-1.c	17;"	d	file:
+INDEX_OF_ARRAY4D	array.h	22;"	d
+INDEX_OF_ARRAY4D	ex-1.c	18;"	d	file:
+INDEX_OF_ARRAY5D	array.h	23;"	d
+INDEX_OF_ARRAY5D	ex-1.c	19;"	d	file:
+INSTALL	Makefile	/^INSTALL = \/usr\/bin\/install -c$/;"	m
+INSTALL_DATA	Makefile	/^INSTALL_DATA = ${INSTALL} -m 644$/;"	m
+INSTALL_HEADER	Makefile	/^INSTALL_HEADER = $(INSTALL_DATA)$/;"	m
+INSTALL_PROGRAM	Makefile	/^INSTALL_PROGRAM = ${INSTALL}$/;"	m
+INSTALL_SCRIPT	Makefile	/^INSTALL_SCRIPT = ${INSTALL}$/;"	m
+INSTALL_STRIP_PROGRAM	Makefile	/^INSTALL_STRIP_PROGRAM = $(install_sh) -c -s$/;"	m
+LDFLAGS	Makefile	/^LDFLAGS = $/;"	m
+LIBOBJS	Makefile	/^LIBOBJS = $/;"	m
+LIBS	Makefile	/^LIBS = $/;"	m
+LINEARIZE2D	array.h	18;"	d
+LINEARIZE2D	ex-1.c	14;"	d	file:
+LINEARIZE3D	array.h	25;"	d
+LINEARIZE3D	ex-1.c	21;"	d	file:
+LINEARIZE4D	array.h	26;"	d
+LINEARIZE4D	ex-1.c	22;"	d	file:
+LINEARIZE5D	array.h	27;"	d
+LINEARIZE5D	ex-1.c	23;"	d	file:
+LINK	Makefile	/^LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@$/;"	m
+LTLIBOBJS	Makefile	/^LTLIBOBJS = $/;"	m
+MAKEINFO	Makefile	/^MAKEINFO = ${SHELL} \/workspace\/uff\/build-aux\/missing makeinfo$/;"	m
+MAX	util.h	23;"	d
+MIN	util.h	20;"	d
+MKDIR_P	Makefile	/^MKDIR_P = \/bin\/mkdir -p$/;"	m
+Matrix	array.h	/^typedef Scalar**             Matrix;$/;"	t
+NORMAL_INSTALL	Makefile	/^NORMAL_INSTALL = :$/;"	m
+NORMAL_UNINSTALL	Makefile	/^NORMAL_UNINSTALL = :$/;"	m
+OBJEXT	Makefile	/^OBJEXT = o$/;"	m
+PACKAGE	Makefile	/^PACKAGE = hello$/;"	m
+PACKAGE_BUGREPORT	Makefile	/^PACKAGE_BUGREPORT = ivan@42algoritmos.com.br$/;"	m
+PACKAGE_NAME	Makefile	/^PACKAGE_NAME = hello$/;"	m
+PACKAGE_STRING	Makefile	/^PACKAGE_STRING = hello 0.02$/;"	m
+PACKAGE_TARNAME	Makefile	/^PACKAGE_TARNAME = hello$/;"	m
+PACKAGE_URL	Makefile	/^PACKAGE_URL = http:\/\/42algoritmos.com.br\/$/;"	m
+PACKAGE_VERSION	Makefile	/^PACKAGE_VERSION = 0.02$/;"	m
+PATH_SEPARATOR	Makefile	/^PATH_SEPARATOR = :$/;"	m
+POST_INSTALL	Makefile	/^POST_INSTALL = :$/;"	m
+POST_UNINSTALL	Makefile	/^POST_UNINSTALL = :$/;"	m
+PRE_INSTALL	Makefile	/^PRE_INSTALL = :$/;"	m
+PRE_UNINSTALL	Makefile	/^PRE_UNINSTALL = :$/;"	m
+PROGRAMS	Makefile	/^PROGRAMS = $(bin_PROGRAMS)$/;"	m
+PYTHAGORAS	pythagoras.h	2;"	d
+RANLIB	Makefile	/^RANLIB = ranlib$/;"	m
+REAL_H	real.h	2;"	d
+Real	real.h	/^    typedef double           Real;$/;"	t
+Real	real.h	/^    typedef float            Real;$/;"	t
+Row	array.h	/^typedef const unsigned long  Row;$/;"	t
+SET_MAKE	Makefile	/^SET_MAKE = $/;"	m
+SHELL	Makefile	/^SHELL = \/bin\/bash$/;"	m
+SOURCES	Makefile	/^SOURCES = $(main_SOURCES)$/;"	m
+SQR	pythagoras.h	6;"	d
+SQR	util.h	10;"	d
+STRIP	Makefile	/^STRIP = $/;"	m
+SWAP	util.h	17;"	d
+Scalar	ex-1.c	/^typedef double               Scalar;$/;"	t	file:
+Scalar	real.h	/^    typedef double           Scalar;$/;"	t
+Scalar	real.h	/^    typedef float            Scalar;$/;"	t
+Size	array.h	/^typedef const unsigned long  Size;$/;"	t
+UTIL_H	util.h	2;"	d
+VERSION	Makefile	/^VERSION = 0.02$/;"	m
+__error	except.h	12;"	d
+_complex	complex.h	/^typedef struct _complex {$/;"	s
+abs_builddir	Makefile	/^abs_builddir = \/workspace\/uff\/examples\/models\/eq4$/;"	m
+abs_srcdir	Makefile	/^abs_srcdir = \/workspace\/uff\/examples\/models\/eq4$/;"	m
+abs_top_builddir	Makefile	/^abs_top_builddir = \/workspace\/uff$/;"	m
+abs_top_srcdir	Makefile	/^abs_top_srcdir = \/workspace\/uff$/;"	m
+ac_ct_AR	Makefile	/^ac_ct_AR = ar$/;"	m
+ac_ct_CC	Makefile	/^ac_ct_CC = gcc$/;"	m
+am__aclocal_m4_deps	Makefile	/^am__aclocal_m4_deps = $(top_srcdir)\/configure.ac$/;"	m
+am__base_list	Makefile	/^am__base_list = \\$/;"	m
+am__can_run_installinfo	Makefile	/^am__can_run_installinfo = \\$/;"	m
+am__cd	Makefile	/^am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd$/;"	m
+am__configure_deps	Makefile	/^am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \\$/;"	m
+am__define_uniq_tagged_files	Makefile	/^am__define_uniq_tagged_files = \\$/;"	m
+am__depfiles_maybe	Makefile	/^am__depfiles_maybe = depfiles$/;"	m
+am__include	Makefile	/^am__include = include$/;"	m
+am__install_max	Makefile	/^am__install_max = 40$/;"	m
+am__installdirs	Makefile	/^am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(includedir)"$/;"	m
+am__is_gnu_make	Makefile	/^am__is_gnu_make = test -n '$(MAKEFILE_LIST)' && test -n '$(MAKELEVEL)'$/;"	m
+am__leading_dot	Makefile	/^am__leading_dot = .$/;"	m
+am__make_dryrun	Makefile	/^am__make_dryrun = (target_option=n; $(am__make_running_with_option))$/;"	m
+am__make_keepgoing	Makefile	/^am__make_keepgoing = (target_option=k; $(am__make_running_with_option))$/;"	m
+am__make_running_with_option	Makefile	/^am__make_running_with_option = \\$/;"	m
+am__mv	Makefile	/^am__mv = mv -f$/;"	m
+am__nobase_list	Makefile	/^am__nobase_list = $(am__nobase_strip_setup); \\$/;"	m
+am__nobase_strip	Makefile	/^am__nobase_strip = \\$/;"	m
+am__nobase_strip_setup	Makefile	/^am__nobase_strip_setup = \\$/;"	m
+am__quote	Makefile	/^am__quote = $/;"	m
+am__strip_dir	Makefile	/^am__strip_dir = f=`echo $$p | sed -e 's|^.*\/||'`;$/;"	m
+am__tagged_files	Makefile	/^am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)$/;"	m
+am__tar	Makefile	/^am__tar = $${TAR-tar} chof - "$$tardir"$/;"	m
+am__uninstall_files_from_dir	Makefile	/^am__uninstall_files_from_dir = { \\$/;"	m
+am__uniquify_input	Makefile	/^am__uniquify_input = $(AWK) '\\$/;"	m
+am__untar	Makefile	/^am__untar = $${TAR-tar} xf -$/;"	m
+am__v_CCLD_	Makefile	/^am__v_CCLD_ = $(am__v_CCLD_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_CCLD_0	Makefile	/^am__v_CCLD_0 = @echo "  CCLD    " $@;$/;"	m
+am__v_CCLD_1	Makefile	/^am__v_CCLD_1 = $/;"	m
+am__v_CC_	Makefile	/^am__v_CC_ = $(am__v_CC_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_CC_0	Makefile	/^am__v_CC_0 = @echo "  CC      " $@;$/;"	m
+am__v_CC_1	Makefile	/^am__v_CC_1 = $/;"	m
+am__v_GEN_	Makefile	/^am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_GEN_0	Makefile	/^am__v_GEN_0 = @echo "  GEN     " $@;$/;"	m
+am__v_GEN_1	Makefile	/^am__v_GEN_1 = $/;"	m
+am__v_P_	Makefile	/^am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_P_0	Makefile	/^am__v_P_0 = false$/;"	m
+am__v_P_1	Makefile	/^am__v_P_1 = :$/;"	m
+am__v_at_	Makefile	/^am__v_at_ = $(am__v_at_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_at_0	Makefile	/^am__v_at_0 = @$/;"	m
+am__v_at_1	Makefile	/^am__v_at_1 = $/;"	m
+am__v_lt_	Makefile	/^am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))$/;"	m
+am__v_lt_0	Makefile	/^am__v_lt_0 = --silent$/;"	m
+am__v_lt_1	Makefile	/^am__v_lt_1 = $/;"	m
+am__vpath_adj	Makefile	/^am__vpath_adj = case $$p in \\$/;"	m
+am__vpath_adj_setup	Makefile	/^am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;$/;"	m
+am_main_OBJECTS	Makefile	/^am_main_OBJECTS = main-main.$(OBJEXT) main-eq2.$(OBJEXT) \\$/;"	m
+atos	real.h	16;"	d
+bin_PROGRAMS	Makefile	/^bin_PROGRAMS = main$(EXEEXT)$/;"	m
+bindir	Makefile	/^bindir = ${exec_prefix}\/bin$/;"	m
+bool	datatype.h	/^    typedef enum {false=0, true=1} bool;$/;"	t	typeref:enum:__anon1
+build_alias	Makefile	/^build_alias = $/;"	m
+builddir	Makefile	/^builddir = .$/;"	m
+cbrt	util.h	37;"	d
+complex	complex.h	/^} complex;$/;"	t	typeref:struct:_complex
+data_fmt	ex-1.c	6;"	d	file:
+data_fmt	real.h	14;"	d
+data_no_fmt	real.h	12;"	d
+datadir	Makefile	/^datadir = ${datarootdir}$/;"	m
+datarootdir	Makefile	/^datarootdir = ${prefix}\/share$/;"	m
+depcomp	Makefile	/^depcomp = $(SHELL) $(top_srcdir)\/build-aux\/depcomp$/;"	m
+docdir	Makefile	/^docdir = ${datarootdir}\/doc\/${PACKAGE_TARNAME}$/;"	m
+dvidir	Makefile	/^dvidir = ${docdir}$/;"	m
+eq2g	eq2.c	/^Array eq2g(Scalar a, Scalar b, Scalar c)$/;"	f
+eq3g	eq3.c	/^Array eq3g(Scalar a, Scalar b, Scalar c, Scalar d)$/;"	f
+exec_prefix	Makefile	/^exec_prefix = ${prefix}$/;"	m
+false	datatype.h	/^    typedef enum {false=0, true=1} bool;$/;"	e	enum:__anon1
+host_alias	Makefile	/^host_alias = $/;"	m
+htmldir	Makefile	/^htmldir = ${docdir}$/;"	m
+imag	complex.h	/^    Scalar imag;$/;"	m	struct:_complex
+imagpart	complex.h	17;"	d
+include_HEADERS	Makefile	/^include_HEADERS = datatype.h real.h eq2.h eq3.h complex.h array.h$/;"	m
+includedir	Makefile	/^includedir = ${prefix}\/include$/;"	m
+infodir	Makefile	/^infodir = ${datarootdir}\/info$/;"	m
+install_sh	Makefile	/^install_sh = ${SHELL} \/workspace\/uff\/build-aux\/install-sh$/;"	m
+install_sh_DATA	Makefile	/^install_sh_DATA = $(install_sh) -c -m 644$/;"	m
+install_sh_PROGRAM	Makefile	/^install_sh_PROGRAM = $(install_sh) -c$/;"	m
+install_sh_SCRIPT	Makefile	/^install_sh_SCRIPT = $(install_sh) -c$/;"	m
+is_null	except.h	10;"	d
+is_zero	util.h	28;"	d
+libdir	Makefile	/^libdir = ${exec_prefix}\/lib$/;"	m
+libexecdir	Makefile	/^libexecdir = ${exec_prefix}\/libexec$/;"	m
+localedir	Makefile	/^localedir = ${datarootdir}\/locale$/;"	m
+localstatedir	Makefile	/^localstatedir = ${prefix}\/var$/;"	m
+main	ex-1.c	/^int main(int argc, char **argv)$/;"	f
+main	main.c	/^int main(int argc, char *argv[])$/;"	f
+main_CFLAGS	Makefile	/^main_CFLAGS = -O0 -Wall -ansi -Werror -DDOUBLE_PRECISION -DDECNUMBER -DBOOLTYPE$/;"	m
+main_DEPENDENCIES	Makefile	/^main_DEPENDENCIES =$/;"	m
+main_LDADD	Makefile	/^main_LDADD = -lm$/;"	m
+main_LINK	Makefile	/^main_LINK = $(CCLD) $(main_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) \\$/;"	m
+main_OBJECTS	Makefile	/^main_OBJECTS = $(am_main_OBJECTS)$/;"	m
+main_SOURCES	Makefile	/^main_SOURCES = main.c eq2.c eq3.c array.c$/;"	m
+mandir	Makefile	/^mandir = ${datarootdir}\/man$/;"	m
+mkdir_p	Makefile	/^mkdir_p = $(MKDIR_P)$/;"	m
+mkinstalldirs	Makefile	/^mkinstalldirs = $(install_sh) -d$/;"	m
+new_2d	ex-1.c	/^Array2d new_2d(size_t dim1, size_t dim2)$/;"	f
+new_3d	ex-1.c	/^Array3d new_3d(size_t dim1, size_t dim2, size_t dim3)$/;"	f
+new_4d	ex-1.c	/^Array4d new_4d(size_t dim1, size_t dim2, size_t dim3, size_t dim4)$/;"	f
+new_5d	ex-1.c	/^Array5d new_5d(size_t dim1, size_t dim2, size_t dim3, size_t dim4, size_t dim5)$/;"	f
+new_array	array.c	/^Array new_array(Size size)$/;"	f
+new_array_2d	array.c	/^Array2d new_array_2d(size_t dim1, size_t dim2)$/;"	f
+new_array_3d	array.c	/^Array3d new_array_3d(size_t dim1,$/;"	f
+new_array_4d	array.c	/^Array4d new_array_4d(size_t dim1,$/;"	f
+new_array_5d	array.c	/^Array5d new_array_5d(size_t dim1,$/;"	f
+oldincludedir	Makefile	/^oldincludedir = \/usr\/include$/;"	m
+pdfdir	Makefile	/^pdfdir = ${docdir}$/;"	m
+pkgdatadir	Makefile	/^pkgdatadir = $(datadir)\/hello$/;"	m
+pkgincludedir	Makefile	/^pkgincludedir = $(includedir)\/hello$/;"	m
+pkglibdir	Makefile	/^pkglibdir = $(libdir)\/hello$/;"	m
+pkglibexecdir	Makefile	/^pkglibexecdir = $(libexecdir)\/hello$/;"	m
+populate_array2d_w_sequential_numbers	array.c	/^void populate_array2d_w_sequential_numbers(size_t    dim1,$/;"	f
+populate_array2d_w_sequential_numbers	ex-1.c	/^void populate_array2d_w_sequential_numbers(size_t    dim1,$/;"	f	file:
+populate_array3d_w_sequential_numbers	array.c	/^void populate_array3d_w_sequential_numbers(size_t    dim1,$/;"	f
+populate_array3d_w_sequential_numbers	ex-1.c	/^void populate_array3d_w_sequential_numbers(size_t    dim1,$/;"	f	file:
+populate_array4d_w_sequential_numbers	array.c	/^void populate_array4d_w_sequential_numbers(size_t    dim1,$/;"	f
+populate_array4d_w_sequential_numbers	ex-1.c	/^void populate_array4d_w_sequential_numbers(size_t    dim1,$/;"	f	file:
+populate_array5d_w_sequential_numbers	array.c	/^void populate_array5d_w_sequential_numbers(size_t    dim1,$/;"	f
+populate_array5d_w_sequential_numbers	ex-1.c	/^void populate_array5d_w_sequential_numbers(size_t    dim1,$/;"	f	file:
+prefix	Makefile	/^prefix = \/usr\/local$/;"	m
+print_array	array.c	/^void print_array(Array1d array, size_t size) {$/;"	f
+print_array	ex-1.c	/^void print_array(Array1d array, size_t size) {$/;"	f	file:
+program_transform_name	Makefile	/^program_transform_name = s,x,x,$/;"	m
+psdir	Makefile	/^psdir = ${docdir}$/;"	m
+pythagoras	pythagoras.c	/^Scalar pythagoras(Scalar a, Scalar b)$/;"	f
+real	complex.h	/^    Scalar real;$/;"	m	struct:_complex
+realpart	complex.h	18;"	d
+sbindir	Makefile	/^sbindir = ${exec_prefix}\/sbin$/;"	m
+sharedstatedir	Makefile	/^sharedstatedir = ${prefix}\/com$/;"	m
+srcdir	Makefile	/^srcdir = .$/;"	m
+subdir	Makefile	/^subdir = examples\/models\/eq4$/;"	m
+sysconfdir	Makefile	/^sysconfdir = ${prefix}\/etc$/;"	m
+target_alias	Makefile	/^target_alias = $/;"	m
+test	ex-1.c	/^void test() {$/;"	f	file:
+test	main.c	/^static int test(int argc, char *argv[])$/;"	f	file:
+top_build_prefix	Makefile	/^top_build_prefix = ..\/..\/..\/$/;"	m
+top_builddir	Makefile	/^top_builddir = ..\/..\/..$/;"	m
+top_srcdir	Makefile	/^top_srcdir = ..\/..\/..$/;"	m
+transform	Makefile	/^transform = $(program_transform_name)$/;"	m
+true	datatype.h	/^    typedef enum {false=0, true=1} bool;$/;"	e	enum:__anon1
+uint8_t	array.h	/^typedef unsigned char        uint8_t;$/;"	t
+uint8_t	ex-1.c	/^typedef unsigned char        uint8_t;$/;"	t	file:
+zero	array.c	/^void zero(Array array, Size size)$/;"	f

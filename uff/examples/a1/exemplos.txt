@@ -1,0 +1,4 @@
+./exemplo10 "s = s0 + v0*t + (1/2)*a*t^2"
+./exemplo10 "E = M*C^2"
+./exemplo10 "v = v0 + a*t"
+./exemplo10 "f(x) = 20.7*x - 6.6"

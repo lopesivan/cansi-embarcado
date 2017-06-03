@@ -1,0 +1,23 @@
+#
+# Fornecer uma interface para criação de famílias de objetos relacionados ou
+# dependentes sem especificar suas classes concretas.
+#
+
+Family:                     # Família de tipos
+- Family                    # Nome do tipo
+- FamilyTypes:              # Nome da Família de tipos
+    - Type1                 # primeiro tipo definido
+
+AbstractFactory:            # Classe *AbstractFactory*
+- AbstractFactory:          # Nome da Classe *AbstractFactory*
+    - get                   # Método chamador
+    - CreateProductA:       # Primeiro método abstrato de *AbstractFactory*
+        - AbstractProductA: # 
+            - doIt
+            - ProductA1
+
+ConcreteFactory:
+- ConcreteFactory1          # Cria o Produto A1
+
+Client:
+- Cliente

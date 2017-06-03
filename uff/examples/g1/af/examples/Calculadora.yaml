@@ -1,0 +1,32 @@
+#
+# Fornecer uma interface para criação de famílias de objetos relacionados ou
+# dependentes sem especificar suas classes concretas.
+#
+
+Family:                     # Família de tipos
+- Operacoes                 # Nome do tipo
+- TiposDeOperacoes:         # Nome da Família de tipos
+    - Soma                  # primeiro tipo definido
+    - Subtracao
+    - Divisao
+    - Multiplicacao
+
+AbstractFactory:            # Classe *AbstractFactory*
+- Calculadora:              # Nome da Classe *AbstractFactory*
+    - get                   # Método chamador
+    - Solucao:              # Primeiro método abstrato de *AbstractFactory*
+        - OperacaoMatematica: #
+            - calcula
+            - Soma
+            - Subtracao
+            - Divisao
+            - Multiplicacao
+
+ConcreteFactory:
+- oSoma             # Cria o Produto A1
+- oSubtracao        # Cria o Produto A2
+- oDivisao          # Cria o Produto A2
+- oMultiplicacao    # Cria o Produto A2
+
+Client:
+- Cliente
